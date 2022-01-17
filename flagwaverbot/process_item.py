@@ -81,9 +81,6 @@ def process_item(item: Union[praw.models.Comment, praw.models.Submission]):
 
 # Get the comment(s) and/or submission to scrape for links
 def get_targets(item: Union[praw.models.Comment, praw.models.Submission]) -> List[Target]:
-    def cp():
-        return "comment" if isinstance(item, praw.models.Comment) else "post"
-
     targets = []
     if isinstance(item, praw.models.Comment):
         if settings['allow_reply'] and re.search(r'(?<!\w)!wave(?!\w)', item.body):
@@ -92,7 +89,10 @@ def get_targets(item: Union[praw.models.Comment, praw.models.Submission]) -> Lis
             else:
                 targets.append(Target('the parent comment', item.parent()))
 
-    if settings['allow_self'] and re.search(r'(?<!\w)!wavethis(?!\w)', item.body):
-        targets.append(Target(f'your {cp()}', item))
+        if settings['allow_self'] and re.search(r'(?<!\w)!wavethis(?!\w)', item.body):
+            targets.append(Target(f'your comment', item))
+    else:
+        if settings['allow_self'] and re.search(r'(?<!\w)!wavethis(?!\w)', item.selftext):
+            targets.append(Target(f'your post', item))
 
     return targets
