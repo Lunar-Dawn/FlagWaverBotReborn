@@ -1,0 +1,31 @@
+# The user agent to use. This is arbitrary, but make sure it is unique
+user_agent: FlagWaverBotReborn 2.0
+
+# Subreddits to monitor
+subreddits:
+  - vexillology
+  - vexillologycirclejerk
+
+# Allow waving comments or text posts with !wavethis in
+allow_self: true
+# Allow waving comments or posts when replying with !wave
+allow_reply: true
+# Attempt to reply to comments or text posts mentioning the bot. N.B. this will still require !wave or !wavethis
+mentions: true
+
+# Will be displayed at the bottom of all submissions as "About"
+about_link: https://github.com/LunarRequiem/FlagWaverBotReborn
+# Will be displayed when the bot encounters an error
+error_link: https://github.com/LunarRequiem/FlagWaverBotReborn/issues/new
+# Maintainer name, do not set to username mention (i.e. "/u/spez") or you will be pinged every time the bot comments
+maintainer: Lunar Requiem
+
+# The CORS proxy to use
+# If left blank the bot will work only with images that have proper CORS headers set without filtering
+cors_proxy: https://flagwaver-cors-proxy.herokuapp.com/
+
+# Whether to detect Imgur images and albums, requires public Imgur API key in secret.yaml
+use_imgur: true
+
+# Should a reply be sent if there is nothing to respond to? May be spammy
+reply_empty_summon: false

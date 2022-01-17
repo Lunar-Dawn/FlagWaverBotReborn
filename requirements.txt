@@ -1,0 +1,11 @@
+praw ~= 7.5.0
+prawcore ~= 2.3.0
+
+requests ~= 2.27.1
+
+beautifulsoup4 ~= 4.10.0
+
+strictyaml ~= 1.6.1
+path ~= 16.3.0
+
+pyimgur~=0.6.0
