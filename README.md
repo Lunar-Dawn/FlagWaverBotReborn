@@ -52,3 +52,8 @@ Optionally you can also have Imgur support, which requires an [Imgur API key](ht
 (only the public key is needed). Without this the bot cannot understand Imgur
 Albums or indirect image links. If you do not want imgur support you must set `use_imgur: false`
 in `settings.yaml`
+
+## I am a moderator of a subreddit and would like the bot on my subreddit
+
+Please send modmail to /u/Lunar_Requiem, as I need to know that the 
+request came from a mod 
