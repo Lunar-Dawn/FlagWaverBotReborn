@@ -11,8 +11,8 @@ logging.basicConfig(format='%(asctime)s %(levelname)s - %(item_id)s - %(target_i
 
 
 def main():
-    stream = praw.models.util.stream_generator(comments_submissions_and_mentions, skip_existing=True)
     while True:
+        stream = praw.models.util.stream_generator(comments_submissions_and_mentions, skip_existing=True)
         try:
             for item in stream:
                 process_item(item)
