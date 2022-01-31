@@ -37,7 +37,8 @@ class Target:
                 if hasattr(self.item, 'is_gallery'):
                     self.links = [RedditGallery(self.item)]
                 elif self.item.is_self:
-                    self.links = search_html(self.item.selftext_html)
+                    text = self.item.selftext_html if self.item.selftext_html is not None else ''
+                    self.links = search_html(text)
                 else:
                     link = url_to_link(self.item.url)
                     if link is not None:
