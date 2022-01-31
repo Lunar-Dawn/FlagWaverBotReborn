@@ -5,7 +5,7 @@
 To summon the bot on a subreddit where it has been permitted access by
 the moderators you can type `!wave` in a comment to generate links from
 the post or comment you are replying to or `!wavethis` in a comment
-or text post to generate links in you own comment or post.
+or text post to generate links from your own comment or post.
 
 These can be combined in one comment to wave links in it and its parent.
 
