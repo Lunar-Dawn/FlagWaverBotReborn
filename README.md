@@ -9,9 +9,11 @@ or text post to generate links from your own comment or post.
 
 These can be combined in one comment to wave links in it and its parent.
 
-On any other subreddit you will need to ping the bot for it to respond.
+~~On any other subreddit you will need to ping the bot for it to respond.
 `!wave` and/or `!wavethis` is still needed, and the bot cannot see mentions
-in text posts or comments with more than four mentions.
+in text posts or comments with more than four mentions.~~ \
+**This feature currently does not work properly and is not enabled
+on the running bot, nor should it be enabled if you want to run an instance of it**
 
 ### What can the bot process?
 
