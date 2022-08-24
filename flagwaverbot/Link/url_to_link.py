@@ -3,7 +3,7 @@ from typing import Optional
 import logging
 
 from flagwaverbot.Link import Link
-from flagwaverbot.Link.Specialised import Image, ImgurImage, ImgurAlbum
+from flagwaverbot.Link.Specialised import Image, ImgurImage, ImgurAlbum, ImgurGallery
 
 
 def url_to_link(url: str) -> Optional[Link]:
@@ -13,6 +13,9 @@ def url_to_link(url: str) -> Optional[Link]:
 
         if ImgurAlbum.is_valid_url(url):
             return ImgurAlbum(url)
+
+        if ImgurGallery.is_valid_url(url):
+            return ImgurGallery(url)
 
         if Image.is_valid_url(url):
             return Image(url)

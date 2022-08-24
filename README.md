@@ -23,6 +23,7 @@ The bot understands
 - Reddit galleries
 - Imgur image links (imgur.com/abc123)
 - Imgur album links (imgur.com/a/abc123)
+- Imgur gallery links (imgur.com/gallery/abc123)
 
 ## There's a problem with the bot/I have a suggestion for the bot
 
