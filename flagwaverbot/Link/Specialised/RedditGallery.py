@@ -1,6 +1,6 @@
 import praw.models
 
-from flagwaverbot.Link.Specialised import Image
+from flagwaverbot.Link.Specialised import Media
 from flagwaverbot.Link.Specialised.Gallery import Gallery
 
 
@@ -17,4 +17,4 @@ class RedditGallery(Gallery):
             meta = self.submission.media_metadata[media_id]
             if meta['e'] == 'Image':
                 source = meta['s']
-                self.images.append(Image(source['u']))
+                self.images.append(Media(source['u']))

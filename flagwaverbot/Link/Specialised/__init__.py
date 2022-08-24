@@ -1,4 +1,4 @@
-from .Image import Image
-from .ImgurImage import ImgurImage
+from .Media import Media
+from .ImgurImage import ImgurMedia
 from .ImgurAlbum import ImgurAlbum
 from .ImgurGallery import ImgurGallery

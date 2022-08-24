@@ -19,9 +19,9 @@ on the running bot, nor should it be enabled if you want to run an instance of i
 
 The bot understands
 
-- Direct image link (images that open directly in the browser, if the url has a .jpg/.png in it it's likely good)
+- Direct media link (images that open directly in the browser, if the url has a .jpg/.png/.mp4 in it, it's likely good)
 - Reddit galleries
-- Imgur image links (imgur.com/abc123)
+- Imgur media links (imgur.com/abc123)
 - Imgur album links (imgur.com/a/abc123)
 - Imgur gallery links (imgur.com/gallery/abc123)
 

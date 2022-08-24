@@ -2,7 +2,7 @@ import re
 
 from flagwaverbot.config import settings
 from flagwaverbot.imgur import imgur
-from flagwaverbot.Link.Specialised import Image
+from flagwaverbot.Link.Specialised import Media
 from flagwaverbot.Link.Specialised.Gallery import Gallery
 
 regex = re.compile(r'^(?:https?://)?(?:www\.)?imgur\.com/a/(\w+)/?$')
@@ -19,7 +19,7 @@ class ImgurAlbum(Gallery):
 
         album = imgur.get_album(match.group(1))
 
-        self.images = [Image(i.link) for i in album.images]
+        self.images = [Media(i.link) for i in album.images]
 
     @staticmethod
     def is_valid_url(url: str) -> bool:
