@@ -1,18 +1,19 @@
 from typing import Optional
 
 import sys
+import re
 import requests
+
+image_regex = re.compile('image/.*')
 
 
 def is_image(url: str) -> bool:
-    image_formats = ('image/png', 'image/jpeg', 'image/jpg')
-
     response = get_headers(url)
 
     if 'content-type' not in response.headers:
         return False
 
-    return response.headers['content-type'] in image_formats
+    return image_regex.fullmatch(response.headers['content-type']) is not None
 
 
 def get_headers(url: str) -> Optional[requests.Response]:
